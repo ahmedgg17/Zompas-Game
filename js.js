@@ -343,7 +343,7 @@ function lose(){
                 gunRang = 100
                 setTimeout(()=>{
                 gunRang = 160
-            },30000)
+            },60000)
             }
         }
                 if(ele.top >500){
