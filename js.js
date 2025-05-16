@@ -296,7 +296,7 @@ function lose(){
             shield.style.left = randWidth +"px"
             skills.appendChild(shield)
         }
-    },10000)
+    },60000)
     setInterval(()=>{
         let playerWidth = document.querySelector(".player").getBoundingClientRect()
         let healler = document.querySelectorAll(".more-health")
@@ -343,7 +343,7 @@ function lose(){
                 gunRang = 100
                 setTimeout(()=>{
                 gunRang = 160
-            },60000)
+            },30000)
             }
         }
                 if(ele.top >500){
