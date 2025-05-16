@@ -1,0 +1,353 @@
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-family: Arial, Helvetica, sans-serif;
+} *{
+    box-sizing: border-box;
+}
+:root{
+    --animationTime:0.7s;
+    --shadow:0 0 5px black , 0 0 10px inset;
+}
+
+.damige{
+    box-shadow: 0 0 40px 10px red inset;
+}
+.game-contener{
+       transition: 0.5s;
+    width: 600px;
+    height: 600px;
+    background-color: rgb(205, 255, 90);
+    border: 2px green solid;
+    border-radius: 20px;
+            position: relative;
+}
+.healthed{
+    box-shadow: 0 0 40px 10px rgb(0, 255, 13) inset;
+}
+.shieled{
+    box-shadow: 0 0 40px 10px rgb(25, 0, 248) inset;
+}
+.game{
+    width: 100%;
+    height: 548px;
+    box-shadow: 0 0 40px black inset ,0 0 black ;
+ border-radius: 0 0 20px 20px;
+}
+.game-contener header{
+    background-color: green;
+    height: 50px;
+        border-radius: 15px 15px 0 0;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        box-shadow: 0px 1px 10px ;
+        z-index: 1000;
+}
+.game-contener header p {
+    margin: 0;
+
+}
+.game-contener header .score {
+    background-color: rgb(205, 255, 90);
+width: 100px;
+font-size: 20px;
+padding: 0 5px 0 5px;
+border-radius: 20px;
+        box-shadow: 0px 0px 10px inset ;
+
+}
+.game-contener header .game-name {
+    text-align: center;
+    /* background-color: rgb(205, 255, 90); */
+width: 100px;
+color: white;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 20px;
+padding: 0 5px 0 5px;
+border-radius: 20px;
+}
+
+.game .player {
+    /* background-color: rgb(255, 233, 233); */
+    width: 100px;
+    position: absolute;
+height: 100px;
+bottom: 40px;
+display: flex;
+flex-direction: column;
+align-items: center;
+transition: 0.1s;
+}
+.game .body{
+width: 50px;
+height: 50px;
+background-color: rgb(255, 153, 0);
+border-radius: 20px;
+box-shadow: 0 0 10px black , 0 0 10px inset;
+z-index: 101;
+}
+.game .gun{
+    position: relative;
+width: 10px;
+height: 30px;
+background-color: rgb(0, 0, 0);
+box-shadow: 0 0 10px black;
+z-index: 100;
+bottom:1px;
+    transition: 0.05s;
+}
+.pump{
+    width: 5px;
+    height: 20px;
+    background-color: black;
+    position: absolute;
+        left: 0;
+    border-radius: 20px;
+bottom: 140px;
+animation: pumper 0.6s linear;
+box-shadow: 5px 0 10px black , 0 0 10px inset;
+
+}
+.munster .body{
+background-color: red;
+}
+.munster{
+    top: 70px;
+position: absolute;
+display: flex;
+flex-direction: column;
+z-index: 1;
+animation: munsters 10s linear;
+}
+.munster .health{
+    width: 100%;
+    height: 10px;
+    margin: 0 0 5px 0;
+background-color: rgb(24, 0, 0);
+border-radius: 20px;
+}
+.green-part{
+    border-radius: 20px;
+        width: 100%;
+        height:100%;
+        background-color: rgb(6, 202, 6);
+            transition: 0.01s;
+}
+@keyframes pumper{
+    to{
+        bottom: 550px;
+    }
+}
+@keyframes munsters{
+    to{
+        top: 500px;
+    }
+}
+.pleyer-health{
+    width: 90%;
+
+    height: 20px;
+    position: absolute;
+    background-color:red ;
+    bottom: 3px;
+    border-radius: 20px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.green-line{
+            width: 540;
+                border-radius: 20px;
+    background-color:green ;
+    height: 20px;
+    transition: 0.3s;
+}
+.game-over{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    z-index: 10000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color:green ;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+        font-size: 20px;
+        border-radius: 20px;
+        box-shadow: 0 0 10px 1px black;
+        color: white;
+        display: none;
+}
+.game-over button{
+    width: 100px;
+    margin: 50px auto;
+
+    background-color: rgba(255, 255, 255, 0.253);
+    border: none;
+    padding: 10px 0px;
+    text-align: center;
+    border-radius: 20px;
+    outline: none;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.game-over button:hover{
+    transform: scale(1.1)
+}
+.game-over button:active{
+    transform: scale(0.9)
+}
+
+/* gra */
+
+.hand{
+    width: 30px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: rgb(255, 174, 0);
+    position: relative;
+    top: 35px;
+    transition: 0.05s;
+box-shadow: 5px 0 10px black , 0 0 10px inset;
+}
+.flash{
+    position: absolute;
+    width: 70px;
+    top: -31px;
+    left: 17px;
+    transform: rotate(-90deg);
+    display: none;
+    z-index: 100;
+    opacity: 0.8;
+}
+.killanimation{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    top:0;
+}
+.a{
+    top: 32.5px;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 5px;
+}
+.ball1{
+    animation: ball1 var(--animationTime);
+box-shadow: 5px 0 10px black , 0 0 10px inset;
+
+}
+.ball2{
+    animation: ball2 var(--animationTime);
+box-shadow: 5px 0 10px black , 0 0 10px inset;
+
+}
+.ball3{
+    animation: ball3 var(--animationTime);
+box-shadow: 5px 0 10px black , 0 0 10px inset;
+
+}
+.ball4{
+    animation: ball4 var(--animationTime);
+box-shadow: 5px 0 10px black , 0 0 10px inset;
+
+}
+.ball5{
+    animation: ball5 var(--animationTime);
+box-shadow: 5px 0 10px black , 0 0 10px inset;
+
+}
+@keyframes ball1 {
+to{
+transform: translate(-20px,-50px);
+box-shadow: var(--shadow);
+
+
+}
+}
+
+@keyframes ball2 {
+to{
+transform: translate(40px,-50px);
+box-shadow: var(--shadow);
+
+}
+}
+
+@keyframes ball3{
+to{
+transform: translate(50px,40px);
+box-shadow: var(--shadow);
+
+}
+}
+
+@keyframes ball4{
+to{
+transform: translate(-50px,10px);
+box-shadow: var(--shadow);
+}
+}
+@keyframes ball5{
+to{
+transform: translate(-20px,40px);
+box-shadow: var(--shadow);
+
+}
+}
+
+.skill{
+    font-size: 40px;
+}
+.more-health{
+    color:green;
+    filter: drop-shadow(0 0 10px black);
+    animation: skills 10s linear;
+    position: absolute;
+    top: 70px;
+}
+.shield{
+    color: rgb(58, 58, 255);
+    filter: drop-shadow(0 0 10px black);
+    animation: skills 10s linear;
+    position: absolute;
+    top: 70px;
+}
+.gun-rang{
+    filter: drop-shadow(0 0 10px black);
+color: rgb(0, 0, 0);
+    animation: skills 10s linear;
+position: absolute;
+    top: 70px;
+}
+@keyframes skills{
+    to{
+        top: 500px;
+    }
+}
+.dif{
+    bottom: 0.1px;
+    position: absolute;
+    border-radius: 20px;
+        width: 0;
+        height:100%;
+        background-color: blue;
+            transition: 0.01s;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tank-game</title>
+    <link rel="stylesheet" href="/style/game-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <audio id="fireSound" src="more/shoot.mp3"></audio>
+    <audio id="killSound" src="more/mixkit-weak-fast-blow-2145.wav"></audio>
+    <audio id="skillSound" src="more/mixkit-retro-game-notification-212.wav"></audio>
+    <audio id="hitSound" src="more/mixkit-martial-arts-fast-punch-2047.wav"></audio>
+    <audio id="deadSound" src="more/mixkit-cinematic-glass-hit-suspense-677.wav"></audio>
+    <audio id="shieldSound" src="more/mixkit-metallic-sword-strike-2160.wav"></audio>
+<div class="game-contener ">
+    <header>
+        <div class="score">
+            <p>0</p>
+        </div>
+        <div class="game-name">
+            <p>tank-game</p>
+        </div>
+    </header>
+    <div class="game">
+        <div class="skills">
+        </div>
+        <div class="background">
+            <div class="player">
+                <img class="flash" src="more/muzzle-flash-clipart-1.png" oncontextmenu="return false;" ondragstart="return false;" alt="">
+                <div class="hand">
+                    
+                </div>
+                <div class="gun">
+
+                </div>
+                <div class="body">
+
+                </div>
+            </div>
+            <div class="pleyer-health">
+                <div class="green-line">
+
+                </div>
+                <div class="dif">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>       
+ <div class="game-over">
+            <div class="scores">
+                <h1>your score</h1>
+                <p>0</p>
+            </div>
+            <button onclick="restart()">restart</button>
+        </div>
+    <script src="js.js"></script>
+</body>
+</html>
